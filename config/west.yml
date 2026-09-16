@@ -17,5 +17,8 @@ manifest:
     - name: zmk-rgbled-widget                     # <---
       remote: caksoylar                           # <---
       revision: main                              # <---
+    - name: prospector-zmk-module                 # <--- and these
+      remote: carrefinho                          # <---
+      revision: feat/new-status-screens           # <---
   self:
     path: config
