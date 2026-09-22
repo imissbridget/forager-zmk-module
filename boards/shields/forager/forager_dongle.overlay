@@ -1,10 +1,16 @@
 #include <dt-bindings/zmk/matrix_transform.h>
-#include "forager.dtsi"
 
 / {
     chosen {
         zmk,kscan = &mock_kscan;
         zmk,physical-layout = &default_layout;
+    };
+
+    mock_kscan: mock_kscan_0 {
+        compatible = "zmk,kscan-mock";
+        columns = <0>;
+        rows = <0>;
+        events = <0>;
     };
 
     default_layout: default_layout {
@@ -48,13 +54,6 @@
             , <&key_physical_attrs 100 100  650  370  (-2500)  800   400>
             , <&key_physical_attrs 100 100  750  350  (-2500)  800   400>
             ;
-    };
-
-    mock_kscan: mock_kscan_0 {
-        compatible = "zmk,kscan-mock";
-        columns = <0>;
-        rows = <0>;
-        events = <0>;
     };
 
     default_transform: keymap_transform_0 {
