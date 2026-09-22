@@ -1,4 +1,9 @@
 #include <dt-bindings/zmk/matrix_transform.h>
+#import "forager.dtsi"
+
+&default_layout {
+    transform = <&default_transform>;
+};
 
 / {
     chosen {
