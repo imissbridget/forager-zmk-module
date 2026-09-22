@@ -31,3 +31,7 @@
         >;
     };
 };
+
+&kscan_0 {
+    status = "disabled";
+};
