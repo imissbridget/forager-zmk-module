@@ -12,6 +12,42 @@
 #define MEH LS(LC(LALT))
 
 / {
+    macros {
+        quest_ret: quest_ret {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp QMARK>
+                , <&macro_tap &kp RETURN>
+                ;
+        };
+        why_ret: why_ret {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp Y>
+                , <&macro_tap &kp RETURN>
+                ;
+        };
+        ns_ret: ns_ret {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp N &kp S>
+                , <&macro_tap &kp RETURN>
+                ;
+        };
+        gui_tab: gui_tab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp TAB>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+    };
+
     behaviors {
         as: auto_shift {
             compatible = "zmk,behavior-hold-tap";
